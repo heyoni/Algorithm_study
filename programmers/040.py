@@ -25,7 +25,3 @@ def solution(d, budget):
         else:
             break
     return answer
-
-d= [1,3,2,5,4]
-budget=9
-print(solution(d, budget))
