@@ -2,9 +2,6 @@
 # 다리를 지나는 트럭
 
 
-bridge_length = 2
-weight = 10
-truck_weight = [7,4,5,6]
 
 from collections import deque
 def solution(bridge_length, weight, truck_weight):
@@ -25,4 +22,3 @@ def solution(bridge_length, weight, truck_weight):
 
     answer += bridge_length
     return answer
-print(answer)
