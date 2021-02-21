@@ -1,31 +1,31 @@
-a = []
-n = 4
-k = 0
-for i in range(1,n+1):
-    for j in range(i):
-        # 배열의 첫번째 원소는 무조건 1번째 1, 2번째 2, ...
-        if j == 0:
-            temp = [i]
-        
-        # 마지막 줄인 경우(ex. 5,6,7,8,9)
-        elif i == n:
-            temp += [i+j]
-            k = i+j
-        # 그 외의 경우
-
-    a.append(temp)
-
-# def direction(k):
-#     if k == 0:
-#         x += 1
-#     elif k == 1:
-#         y += 1
-#     else:
-#         x -= 1
-#         y -= 1
-
-#     return x, y
+# 프로그래머스
+# 삼각달팽이
 
 
+import itertools
+def direction(x,y,k):
+    if k % 3 == 0:
+        x += 1
+    elif k % 3 == 1:
+        y += 1
+    else:
+        x -= 1
+        y -= 1
+
+    return x, y
+
+def solution(n):
+    idx = 1
+    x, y = -1, 0
+    answer = [[0 for j in range(i)] for i in range(1,n+1)]
+    for i in range(n):
+        for j in range(i,n):
+            x, y = direction(x, y, i)
+            print(x,y)
+            answer[x][y] = idx
+            idx += 1
+    return list(itertools.chain.from_iterable(answer))
 
 
+
+print(solution(4))
