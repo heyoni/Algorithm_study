@@ -1,3 +1,3 @@
 # Algorithm_study
   
-1day / 1 Algorithm
+1 day / 1 Algorithm👊
