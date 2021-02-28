@@ -70,6 +70,3 @@ def right2(s):
         if count < 0:
             return False
     return True
-
-
-print(solution('(('))
